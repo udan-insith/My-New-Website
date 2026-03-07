@@ -2,6 +2,51 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Cinzel:regular,500,600,700,800,900);
 
+/* ROOT */
+:root {
+  /* --- 1. BRAND COLORS (The 60-30-10 Rule) --- */
+  --primary: #8b0000;           /* Deep Wine Red (Main CTA) */
+  --primary-hover: #a50000;     /* Lighter red for hover states */
+  --secondary: #d4af37;         /* Antique Gold (Accents/Icons) */
+  --secondary-dark: #b8860b;    /* Darker gold for borders */
+  
+  /* --- 2. NEUTRAL SHADES (Typography & Surfaces) --- */
+  --white: #ffffff;
+  --cream: #fdfaf5;             /* Main background - softer on eyes */
+  --gray-100: #f8f9fa;          /* Subtle section backgrounds */
+  --gray-200: #e9ecef;          /* Card borders */
+  --gray-800: #343a40;          /* Main text color */
+  --gray-900: #212529;          /* Heading color */
+
+  /* --- 3. SEMANTIC COLORS (System Feedback) --- */
+  --success: #28a745;           /* Reservation confirmed */
+  --error: #dc3545;             /* Form validation error */
+  --warning: #ffc107;           /* Limited seating alert */
+  --info: #17a2b8;              /* General notices */
+
+  /* --- 4. TYPOGRAPHY & SPACING --- */
+  --font-heading: 'Josefin Sans', serif;
+  --font-body: 'Cinzel', sans-serif;
+  --font-size-base: 16px;
+  --line-height-relaxed: 1.6;
+  
+  /* Modular Spacing (T-shirt sizes) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* --- 5. UI ELEMENTS (Shadows & Borders) --- */
+  --radius-sm: 4px;
+  --radius-lg: 12px;             /* For modern card feel */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  
+  /* Overlay for images with text */
+  --image-overlay: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+}
+
 /* RESET */
 *,
 *::after,
@@ -14,7 +59,6 @@
 /* BODY STYLING */
 .container {
     width: 100%;
-    min-height: 100vh;
 }
 
 nav {
@@ -22,9 +66,9 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    height: 80px;
+    height: 150px;
     width: 100%;
-    background: #003b49;
+    background: var(--primary);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
 }
 
@@ -47,21 +91,21 @@ nav {
     user-select: none;
     cursor: pointer;
     margin: 0 30px;
-    border: 2px solid #f2c75c;
+    border: 2px solid var(--secondary);
     overflow: hidden;
 }
 
 .item a {
     font-size: 16px;
     text-transform: uppercase;
-    color: #f2c75c;
+    color: var(--secondary);
     z-index: 10;
     text-decoration: none;
     transition: color 200ms ease;
 }
 
 .item:hover a {
-    color: #003b49;
+    color: var(--primary);
 }
 
 .item::before {
@@ -70,7 +114,7 @@ nav {
     width: 0%;
     height: 100%;
     transform: skew(30deg);
-    background: #f2c75c;
+    background: var(--secondary);
     transition: width 400ms ease;
 }
 
@@ -98,3 +142,12 @@ nav {
 }
 
 /* FOOD CONTAINER STYLES */
+.food-container {
+    background-repeat: no-repeat;
+    background-image: url("./images/table.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
