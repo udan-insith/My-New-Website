@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Montagu+Slab:100,200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Cinzel:regular,500,600,700,800,900);
+
 /* RESET */
 *,
 *::after,
@@ -7,6 +11,7 @@
     box-sizing: border-box;
 }
 
+/* BODY STYLING */
 .container {
     width: 100%;
     min-height: 100vh;
@@ -91,3 +96,5 @@ nav {
 .item:nth-child(4):hover::before {
     height: 100%;
 }
+
+/* FOOD CONTAINER STYLES */
