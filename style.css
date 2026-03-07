@@ -9,6 +9,8 @@
   --primary-hover: #a50000;     /* Lighter red for hover states */
   --secondary: #d4af37;         /* Antique Gold (Accents/Icons) */
   --secondary-dark: #b8860b;    /* Darker gold for borders */
+  --primary-1: #520000;
+  --secondary-1: #ff9900;
   
   /* --- 2. NEUTRAL SHADES (Typography & Surfaces) --- */
   --white: #ffffff;
@@ -29,6 +31,8 @@
   --font-body: 'Cinzel', sans-serif;
   --font-size-base: 16px;
   --line-height-relaxed: 1.6;
+  --fs-1: 1.6rem;
+  --fs-2: 51px;
   
   /* Modular Spacing (T-shirt sizes) */
   --space-xs: 0.25rem;
@@ -57,6 +61,10 @@
 }
 
 /* BODY STYLING */
+body {
+    color: var(--white);
+    overflow: hidden;
+}
 .container {
     width: 100%;
 }
@@ -144,10 +152,46 @@ nav {
 /* FOOD CONTAINER STYLES */
 .food-container {
     background-repeat: no-repeat;
-    background-image: url("./images/table.jpg");
+    background-image: url("./images/em-table.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     width: 100vw;
     height: 100vh;
+}
+
+.desc-container {
+    position: relative;
+    left: 80px;
+    top: 70px;
+    width: 40vw;
+}
+
+.food-title {
+    text-shadow: 1px 2px 2px yellow;
+}
+
+.food-title {
+    font-size: var(--fs-2);
+}
+.span {
+    display: block;
+    color: var(--primary);
+} 
+
+.span:nth-child(2) {
+    color: var(--primary-hover);
+}
+
+.food-desc {
+    color: var(--secondary-1);
+    font-size: var(--fs-1);
+    text-shadow: 1px 2px 2px #440000;
+}
+
+#letA,
+#letU {
+    color: #ffbb00;
+    font-size: 80px;
+    text-shadow: 3px 3px 4px #df0000;
 }
