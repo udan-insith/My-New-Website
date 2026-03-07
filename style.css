@@ -1,0 +1,93 @@
+/* RESET */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%;
+    background: #003b49;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 20px -5px;
+}
+
+.nav-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    margin: 0 30px;
+    border: 2px solid #f2c75c;
+    overflow: hidden;
+}
+
+.item a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #f2c75c;
+    z-index: 10;
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.item:hover a {
+    color: #003b49;
+}
+
+.item::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transform: skew(30deg);
+    background: #f2c75c;
+    transition: width 400ms ease;
+}
+
+.item:hover::before {
+    width: 120%;
+}
+
+.item:nth-child(2)::before {
+    transform: skew(-20deg);
+}
+
+.item:nth-child(3)::before {
+    transform: skew(0deg);
+}
+
+.item:nth-child(4)::before {
+    width: 180px;
+    height: 0%;
+    bottom: 0px;
+    transition: height 400ms ease;
+}
+
+.item:nth-child(4):hover::before {
+    height: 100%;
+}
