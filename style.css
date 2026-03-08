@@ -63,7 +63,6 @@
 /* BODY STYLING */
 body {
     color: var(--white);
-    overflow: hidden;
 }
 .container {
     width: 100%;
@@ -154,7 +153,6 @@ nav {
     background-repeat: no-repeat;
     background-image: url("./images/em-table.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     width: 100vw;
     height: 100vh;
@@ -194,4 +192,26 @@ nav {
     color: #ffbb00;
     font-size: 80px;
     text-shadow: 3px 3px 4px #df0000;
+}
+
+
+.header {
+    z-index: 10;
+}
+
+.header.active {
+    position: fixed;
+    animation: slideIn 0.5s ease forwards;
+    width: 100%;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
