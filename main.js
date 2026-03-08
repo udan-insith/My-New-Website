@@ -1,0 +1,1 @@
+const foodContainer = document.querySelector(.food-container)
