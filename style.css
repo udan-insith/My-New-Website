@@ -270,3 +270,19 @@ h1::after:hover {
         
     }
 }
+
+.h1:hover::after {
+    content: attr(data-hover);
+    position: relative;
+    display: block;
+    animation: move 2s 1s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(50%);
+    }
+}
